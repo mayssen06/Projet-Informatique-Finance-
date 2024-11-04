@@ -14,11 +14,7 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-<<<<<<< HEAD
 .idea/
-=======
-.idea
->>>>>>> 302c94a80b244a1df156bcc9a032f7892ad1b75f
 *.iws
 *.iml
 *.ipr
@@ -35,10 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-<<<<<<< HEAD
 .mvn/
 HELP.md
 mvnw.cmd
 mvnw
-=======
->>>>>>> 302c94a80b244a1df156bcc9a032f7892ad1b75f
