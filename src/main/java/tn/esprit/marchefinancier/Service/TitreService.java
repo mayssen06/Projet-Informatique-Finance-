@@ -80,13 +80,13 @@ public class TitreService implements ITitre{
     }
 
     public double VariationAction(int idtitre) {
-      //  int vente = ordreRepository.OffreParTitre(idtitre);
-      //  int achat = ordreRepository.DemandeParTitre(idtitre);
-        double critereeconomique;
-        // if(achat-vente * volatilité>0)
-        //(Quantité d'Achat - Quantité de Vente du jour *30 +- variance mensuelle ) * Volatilité Historique * critereeconomique
-        //  else  (Quantité d'Achat - Quantité de Vente du jour *30 +- variance mensuelle ) * Volatilité Historique * -critereeconom
-
+        int vente = ordreRepository.OffreParTitre(idtitre);
+        int achat = ordreRepository.DemandeParTitre(idtitre);
+       /* double critereeconomique;
+         if(achat-vente * volatilité>0)
+        (Quantité d'Achat - Quantité de Vente du jour *30 +- variance mensuelle ) * Volatilité Historique * critereeconomique
+          else  (Quantité d'Achat - Quantité de Vente du jour *30 +- variance mensuelle ) * Volatilité Historique * -critereeconom
+*/
         return 0;
     }
 
@@ -104,7 +104,7 @@ public class TitreService implements ITitre{
     }
 
     public double simulateNextPrice( Titre titre, double riskFreeRate , double volatility) {
-        double initialPrice = titre.getNominal();
+       double initialPrice = titre.getNominal();
         int n = ordreRepository.DemandeParTitre(titre.getIdTitre());
         int m = ordreRepository.OffreParTitre(titre.getIdTitre());
         int p = societeRepository.findByTitreIdTitre(titre.getIdTitre()).getNbrTitre();
