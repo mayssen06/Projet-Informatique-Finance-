@@ -1,9 +1,10 @@
-/*package tn.esprit.GestionMortadha.marchefinancier.Repositories;
+package tn.esprit.GestionMortadha.marchefinancier.Repositories;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import tn.esprit.GestionMortadha.marchefinancier.Entites.Transaction;
 
 import java.util.List;
 
@@ -13,4 +14,4 @@ public interface TransactionRepository extends JpaRepository<Transaction,Integer
     List<Transaction> getTransactionByAcheteurEmail(String email);
     List<Transaction> getTransactionByVendeurEmail(String email);
 
-}*/
+}

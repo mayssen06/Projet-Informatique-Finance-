@@ -1,4 +1,4 @@
-/*package tn.esprit.GestionMortadha.marchefinancier.Service;
+package tn.esprit.GestionMortadha.marchefinancier.Service;
 
 
 import jakarta.transaction.Transactional;
@@ -67,7 +67,7 @@ public class PerformanceService implements IPerformance {
 
    /* public double calculateConditionalValueAtRisk(double expectedLoss, double portfolioStdDev) {
         return expectedLoss + 0.5 * portfolioStdDev;
-    } */
+    }
 
 
 
@@ -77,5 +77,5 @@ public class PerformanceService implements IPerformance {
 
 
 
-//}
+}
 

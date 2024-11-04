@@ -1,4 +1,4 @@
-/*package tn.esprit.GestionMortadha.marchefinancier.Service;
+package tn.esprit.GestionMortadha.marchefinancier.Service;
 
 
 
@@ -20,4 +20,4 @@ public interface ITransaction {
     List<Transaction> getTranscationByUser(int id);
 
 
-}*/
+}
