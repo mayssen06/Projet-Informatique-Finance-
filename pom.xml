@@ -6,10 +6,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>tn.esprit</groupId>
-	<artifactId>GestionZina</artifactId>
+	<artifactId>GestionMortadha</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GestionZina</name>
 	<description>Demo project for Spring Boot</description>
