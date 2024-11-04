@@ -21,26 +21,26 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User implements Serializable, UserDetails {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    Long id;
 
-    String nom;
-    String prenom;
-    String image;
-
-    @Column(unique=true)
-    String email;
-
+   @Id
+   @GeneratedValue(strategy = GenerationType.TABLE)
+   int idUser;
+    String firstName;
+    String lasttName;
     String password;
-
+    String verifPassword;
+    long phone;
+    @Column(unique = true)
+    String email;
+    double solde;
+    boolean accountStatus;
+    double highestsold;
+    double lowestsold;
+    String profession;
+    String passwordResetToken;
+    boolean Active;
     @Enumerated(EnumType.STRING)
     Role role;
-
-    String passwordResetToken;
-
-    boolean accountStatus;
-
     @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));

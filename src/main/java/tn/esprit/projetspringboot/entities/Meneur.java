@@ -9,4 +9,6 @@ import lombok.experimental.FieldDefaults;
 @Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Meneur extends User {
+    public void setImage(String uniqueFilename) {
+    }
 }

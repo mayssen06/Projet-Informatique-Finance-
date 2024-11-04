@@ -60,7 +60,7 @@ public class IUserAccountServicesImp implements IUserAccountServices {
             }
 
             Files.write(fileNameAndPath, file.getBytes());
-            user.setImage(uniqueFilename);
+            //user.setImage(uniqueFilename);
             return userRepository.save(user);
         } catch (IOException e) {
             throw new RuntimeException("Error processing file", e);

@@ -29,14 +29,14 @@ public class AuthenticationController {
     private final IAuthenticationServices authenticationServices;
 
     @PostMapping("/registerMeneur")
-    public ResponseEntity<Meneur> registerMeneur(@RequestParam("nom") String nom,
-                                                     @RequestParam("prenom") String prenom,
+    public ResponseEntity<Meneur> registerMeneur(@RequestParam("nom") String lasttName,
+                                                     @RequestParam("prenom") String firstName,
                                                      @RequestParam("email") String email,
                                                      @RequestParam("password") String password,
                                                      @RequestParam("image") MultipartFile file) throws IOException {
         Meneur meneur = new Meneur();
-        meneur.setNom(nom);
-        meneur.setPrenom(prenom);
+        meneur.setLasttName(lasttName);
+        meneur.setFirstName(firstName);
         meneur.setEmail(email);
         meneur.setPassword(password);
         meneur.setAccountStatus(true);
@@ -57,14 +57,14 @@ public class AuthenticationController {
     }
 
     @PostMapping("/registerTrader")
-    public ResponseEntity<Trader> registerTrader(@RequestParam("nom") String nom,
-                                                 @RequestParam("prenom") String prenom,
+    public ResponseEntity<Trader> registerTrader(@RequestParam("nom") String lasttName,
+                                                 @RequestParam("prenom") String firstName,
                                                  @RequestParam("email") String email,
                                                  @RequestParam("password") String password
                                                 ) throws IOException {
         Trader trader = new Trader();
-        trader.setNom(nom);
-        trader.setPrenom(prenom);
+        trader.setLasttName(lasttName);
+        trader.setFirstName(firstName);
         trader.setEmail(email);
         trader.setPassword(password);
         trader.setAccountStatus(true);

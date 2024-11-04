@@ -31,12 +31,12 @@ public class ProjetSpringBootApplication implements CommandLineRunner {
 		if (adminAccount == null) {
 			Admin admin = new Admin();
 			admin.setEmail("admin@smfinancier.com");
-			admin.setNom("admin");
-			admin.setPrenom("admin");
+			admin.setLasttName("admin");
+			admin.setFirstName("admin");
 			admin.setRole(Role.ADMIN);
 			admin.setAccountStatus(true);
 			admin.setPassword(new BCryptPasswordEncoder().encode("admin"));
-			admin.setImage("admin.png");
+			//admin.setImage("admin.png");
 			adminRepository.save(admin);
 		}
 	}

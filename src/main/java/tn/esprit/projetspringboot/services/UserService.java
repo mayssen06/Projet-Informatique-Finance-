@@ -10,7 +10,7 @@ import tn.esprit.projetspringboot.repositories.IUserRepository;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class IUserServicesImp implements IUserServices {
+public class UserService implements IUser {
     private final IUserRepository userRepository;
 
     @Override

@@ -63,10 +63,10 @@ public class IAuthenticationServicesImp implements IAuthenticationServices {
 
     private User convertToUserDto(User user) {
         User dto = new User();
-        dto.setId(user.getId());
-        dto.setNom(user.getNom());
-        dto.setPrenom(user.getPrenom());
-        dto.setImage(user.getImage());
+        dto.setIdUser(user.getIdUser());
+        dto.setLasttName(user.getLasttName());
+        dto.setFirstName(user.getFirstName());
+        // dto.setImage(user.getImage());
         dto.setEmail(user.getEmail());
         dto.setPassword(user.getPassword());
         dto.setRole(user.getRole());
@@ -96,7 +96,7 @@ public class IAuthenticationServicesImp implements IAuthenticationServices {
 
         UUID token = UUID.randomUUID();
         userexisting.setPasswordResetToken(token.toString());
-        userexisting.setId(userexisting.getId());
+        userexisting.setIdUser(userexisting.getIdUser());
 
         Mail mail = new Mail();
 
@@ -114,7 +114,7 @@ public class IAuthenticationServicesImp implements IAuthenticationServices {
         User userexisting = userRepository.findByPasswordResetToken(passwordResetToken).orElseThrow(() -> new RuntimeException("User not found"));
         HashMap message = new HashMap();
         if (userexisting != null) {
-            userexisting.setId(userexisting.getId());
+            userexisting.setIdUser(userexisting.getIdUser());
             userexisting.setPassword(new BCryptPasswordEncoder().encode(newPassword));
             userexisting.setPasswordResetToken(null);
             userRepository.save(userexisting);
