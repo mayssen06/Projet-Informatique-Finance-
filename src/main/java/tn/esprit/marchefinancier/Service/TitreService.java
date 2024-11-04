@@ -5,6 +5,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import tn.esprit.marchefinancier.Entites.Portefeuille;
 import tn.esprit.marchefinancier.Entites.Societe;
 import tn.esprit.marchefinancier.Entites.Titre;
+import tn.esprit.marchefinancier.Repositories.OrdreRepository;
 import tn.esprit.marchefinancier.Repositories.PortefeuilleRepository;
 import tn.esprit.marchefinancier.Repositories.SocieteRepository;
 import tn.esprit.marchefinancier.Repositories.TitreRepository;
@@ -18,7 +19,7 @@ public class TitreService implements ITitre{
     public TitreRepository titreRepository;
     public PortefeuilleRepository portefeuilleRepository;
     public SocieteRepository societeRepository;
-
+public OrdreRepository ordreRepository;
 
 
 
