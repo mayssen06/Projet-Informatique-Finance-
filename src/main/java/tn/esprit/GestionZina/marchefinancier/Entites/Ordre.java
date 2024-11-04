@@ -1,8 +1,10 @@
-package tn.esprit.marchefinancier.Entites;
+package tn.esprit.GestionZina.marchefinancier.Entites;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
 import java.io.Serializable;
 import java.util.Date;
 

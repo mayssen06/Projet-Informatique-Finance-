@@ -1,10 +1,11 @@
-package tn.esprit.marchefinancier.Entites;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package tn.esprit.GestionZina.marchefinancier.Entites;
+
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Getter
@@ -13,13 +14,14 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Carnet implements Serializable {
+public class Actualite implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idCarnet;
-
-    @OneToMany(mappedBy = "carnet")
-    @JsonIgnore
-    List<Ordre> ordreList;
-
+    int idActualite;
+    String titre;
+    String description;
+    @ManyToOne
+   Societe societe;
+    @Column
+    private String filename;
 }

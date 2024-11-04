@@ -1,4 +1,4 @@
-package tn.esprit.marchefinancier.Entites;
+package tn.esprit.GestionZina.marchefinancier.Entites;
 
 public enum TypeOrdre {
     AUMARCHE,ACOURSLIMITE,MEILLEURPRIX
