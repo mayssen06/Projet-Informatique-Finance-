@@ -55,7 +55,7 @@ ordreRepository.deleteById(id);
 
     @Override
     public List<Ordre> listOpposeParOrdre(Ordre ordre) {
-        List<Ordre> list=new ArrayList<>();
+        List<Ordre> list =new ArrayList<>();
         List<Ordre> list1=new ArrayList<>();
         List<Ordre> list2=new ArrayList<>();
         list=ordreRepository.OrdreOppose(ordre.getTypeOrdre().toString(),ordre.getTitre().getIdTitre());
